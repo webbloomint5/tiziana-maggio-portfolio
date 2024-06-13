@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tiziana Maggio - Full Stack Developer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .header, .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .intro, .services, .contact-form, .payments {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .intro {
+            background-color: #c1d4ff; /* Colore blu pastello */
+        }
+        .services {
+            background-color: #c1d4ff; /* Colore blu pastello */
+        }
+        .contact-form {
+            background-color: #ffc1e3; /* Colore rosa pastello */
+        }
+        .payments {
+            background-color: #c1d4ff; /* Colore blu pastello */
+        }
+        .intro p {
+            font-size: 1.2rem;
+        }
+        .services h2, .contact-form h2, .payments h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services li {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .services li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-toggle, .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: white;
+        }
+        .btn-toggle:hover, .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .quote-form {
+            display: none;
+            margin-top: 20px;
+        }
+        .quote-form .form-group label {
+            font-weight: bold;
+        }
+        .payments p {
+            font-size: 1rem;
+        }
+        .no-bullets {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Tiziana Maggio - Full Stack Developer</h1>
+</div>
+
+<div class="container">
+    <div class="intro text-center">
+        <p>Benvenuti! Sono Tiziana Maggio, una Full Stack Developer con esperienza nel creare soluzioni web e mobile innovative e personalizzate. Offro servizi di sviluppo front-end, back-end, e app per soddisfare ogni esigenza del tuo progetto.</p>
+    </div>
+
+    <div class="services">
+        <h2 class="text-center">Servizi Offerti</h2>
+        <ul>
+            <li>Sviluppo Front-End: Creazione di interfacce utente interattive e responsive utilizzando HTML, CSS, JavaScript, e framework moderni come React e Vue.js.</li>
+            <li>Sviluppo Back-End: Realizzazione di server, API e database scalabili con tecnologie come Node.js, Django, Ruby on Rails.</li>
+            <li>Sviluppo Full Stack: Progetti completi dalla progettazione alla realizzazione con un approccio integrato e fluido.</li>
+            <li>Sviluppo App: Creazione di applicazioni mobile per Android e iOS utilizzando Flutter, React Native, Swift.</li>
+            <li>Siti Web Personalizzati: Siti monopagina, portfogli, blog, e-commerce, progetti per Domotica.</li>
+            <li>Consulenza Tecnica: Analisi e ottimizzazione di sistemi esistenti per migliorare prestazioni e sicurezza.</li>
+        </ul>
+    </div>
+
+    <div class="contact-form text-center">
+        <h2>Richiedi un Preventivo</h2>
+        <button class="btn btn-toggle" onclick="toggleForm()">Chiedi Preventivo</button>
+
+        <div class="quote-form" id="quote-form">
+            <form action="mailto:irisblublum28@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="project-details">Dettagli del Progetto:</label>
+                    <textarea class="form-control" id="project-details" name="project-details" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Invia</button>
+            </form>
+            <p class="mt-3">Il pagamento sarà suddiviso in tre fasi:</p>
+            <ul class="no-bullets">
+                <li>30% all'inizio</li>
+                <li>40% a metà dello sviluppo</li>
+                <li>30% alla consegna finale</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="payments text-center">
+        <h2>Pagamenti</h2>
+        <p>Accetto pagamenti tramite PayPal per garantire transazioni sicure e veloci.</p>
+        <!-- Inizio del codice generato da PayPal -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="tizianamaggio15@gmail.com">
+            <input type="hidden" name="item_name" value="Servizi di Sviluppo">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="text" name="amount" placeholder="Inserisci l'importo" style="margin-bottom: 10px;">
+            <input type="image" src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal, il metodo semplice e sicuro per pagare online" alt="Acquista ora">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <!-- Fine del codice generato da PayPal -->
+    </div>
+</div>
+
+<div class="footer">
+    <p>Tiziana Maggio - Full Stack Developer | Email: <a href="mailto:tizianamaggio15@gmail.com" style="color: white;">tizianamaggio15@gmail.com</a></p>
+    <p>&copy; 2024 Tiziana Maggio. Tutti i diritti riservati.</p>
+</div>
+
+<script>
+    function toggleForm() {
+        var form = document.getElementById("quote-form");
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
